@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="loginmin.css" rel="stylesheet" />
+</head>
+<body>
+<div class="vid-container">
+  <video id="Video1" class="bgvid back" autoplay="true" muted="muted" preload="auto" loop>
+      <source src="/storage/emulated/0/Download/Snaptik.app_7172523664687090970.mp4" type="video/mp4">
+  </video>
+  <div class="inner-container">
+    <div class="box">
+      <h1>Login</h1>
+      <input type="text" placeholder="Username"/>
+      <input type="password" placeholder="Password"/>
+      <button id="loginButton">Login</button>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('loginButton').addEventListener('click', function() {
+    window.location.href = 'file:///storage/emulated/0/nav.html';
+  });
+</script>
+</body>
+</html>

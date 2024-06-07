@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Order Form</title>
+    <link rel="stylesheet" href=".css">
+    <style>
+        .menu-area {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .menu-area h2 {
+            margin-top: 0;
+        }
+
+        .menu-area label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .menu-area input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .menu-area input[type="submit"] {
+            width: auto;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .menu-area input[type="submit"]:hover {
+            background-color: orangered;
+        }
+    </style>
+    <script>
+        function submitOrder(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Perform any additional validation or processing here
+            window.location.href = "file:///storage/emulated/0/ordern.html"; // Redirect to the thank you page
+        }
+    </script>
+</head>
+<body>
+    <h1>Menu Order Form</h1>
+    <form onsubmit="submitOrder(event)">
+        <div class="menu-area">
+            <h2>Menu Selection</h2>
+            <label for="Group Meals">Group Meals:</label>
+            <input type="checkbox" id="burger" name="burger">
+            
+            <label for="Whopper">Whopper:</label>
+            <input type="checkbox" id="pizza" name="pizza">
+
+            <label for="Smash cheese burger">Smash cheese burger:</label>
+            <input type="checkbox" id="sushi" name="sushi">
+            
+            <label for="Cheese Burger">Cheese Whopper:</label>
+            <input type="checkbox" id="salad" name="salad">
+          
+          <label for="Burger King">Burger King:</label>
+            <input type="checkbox" id="salad" name="salad">
+         
+            
+            <label for="drink">Drink:</label>
+            <select id="drink" name="drink">
+                <option value="none">None</option>
+                <option value="water">Coca cola</option>
+                <option value="soda">Soda</option>
+                <option value="juice">cocktails</option>
+                <option value="coffee">Float</option>
+              <option value="coffee">Iced Tea</option>
+          
+            </select>
+        </div>
+
+        <div class="menu-area">
+            <h2>Special Instructions</h2>
+            <textarea id="instructions" name="instructions" placeholder="Any special instructions"></textarea>
+        </div>
+
+        <div class="menu-area">
+            <h2>Confirmation</h2>
+            <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions
+            <input type="checkbox" id="confirmation" name="confirmation"> I want to receive a confirmation email
+
+            <input type="submit" value="Place Order">
+        </div>
+    </form>
+</body>
+</html>
